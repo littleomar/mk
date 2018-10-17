@@ -1,0 +1,30 @@
+.h5_c_pie{
+
+}
+.h5_c_pie canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.h5_c_pie .text{
+    position: absolute;
+    text-align: center;
+    width: 50px;
+    display: inline-block;
+    transform: scale(.8);
+    z-index: 10;
+    opacity: 0;
+
+}
+
+.h5_c_pie .text{
+    transition: all .5s 1.8s;
+}
+.h5_c_pie_load .text{
+    opacity: 1;
+    transform: scale(.8);
+}
+.h5_c_pie_leave .text{
+    opacity: 0;
+    transform: scale(.8);
+}

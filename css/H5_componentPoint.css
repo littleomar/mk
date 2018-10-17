@@ -1,0 +1,5 @@
+.h5_c_point .point{
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+}

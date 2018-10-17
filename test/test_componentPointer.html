@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color:#000;
+            font-size: 12px;
+        }
+        .iphone{
+            width: 340px;
+            height: 520px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -270px 0 0 -170px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../css/H5_componentBase.css">
+    <script type="text/javascript" src="../js/libs/jquery.js"></script>
+    <script type="text/javascript" src="../js/H5_componentBase.js"></script>
+
+    <!--引入Pointe文件-->
+    <link rel="stylesheet" href="../css/H5_componentPoint.css">
+    <script type="text/javascript" src="../js/H5_componentPoint.js"></script>
+</head>
+<body>
+<div class="iphone">
+
+</div>
+<script type="text/javascript">
+    var cfg = {
+        type : "point",
+        width : 300,
+        height : 300,
+        data : [
+          ["A项",.4,"green"],
+          ["B项",.2,"yellow",0,"-60%"],
+          ["C项",.1,"red",0,"120%"]
+        ],
+        css : {
+            left : 50,
+            top : 50
+        },
+        animateIn : {top :50,opacity:1 },
+        animateOut : {top : 150,opacity:0},
+        center :true
+    };
+    var h5 = new H5_componentPoint( "myName", cfg );
+    $(".iphone").append(h5);
+
+    var leave = true;
+    $("body").click(function () {
+        leave = !leave;
+        $(".h5_c").trigger(leave?"onLeave":"onLoad");
+    })
+</script>
+</body>
+</html>

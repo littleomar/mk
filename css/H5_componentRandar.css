@@ -1,0 +1,14 @@
+.h5_c_randar{
+
+}
+.h5_c_randar canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.h5_c_randar .name{
+    position: absolute;
+    text-align: center;
+    transform: scale(.8);
+    z-index: 10;
+}

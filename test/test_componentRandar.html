@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color:#000;
+            font-size: 12px;
+        }
+        .iphone{
+            width: 340px;
+            height: 520px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -270px 0 0 -170px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../css/H5_componentBase.css">
+    <script type="text/javascript" src="../js/libs/jquery.js"></script>
+    <script type="text/javascript" src="../js/H5_componentBase.js"></script>
+
+    <!--引入Polyline文件-->
+    <link rel="stylesheet" href="../css/H5_componentRandar.css">
+    <script type="text/javascript" src="../js/H5_componentRandar.js"></script>
+</head>
+<body>
+<div class="iphone">
+
+</div>
+<script type="text/javascript">
+    var cfg = {
+        type : "randar",
+        width : 420,
+        height : 420,
+        css : {
+            top : 200
+        },
+        data : [
+            ["JS" , .4,"#ff7676"],
+            ["CSS3" ,.1],
+            ["HTML5" ,.28],
+            ["PHP" ,.32],
+            ["jQuery" ,.05]
+        ],
+        center :true
+    };
+    var h5 = new H5_componentRandar( "myName", cfg );
+    $(".iphone").append(h5);
+
+    var leave = true;
+    $("body").click(function () {
+        leave = !leave;
+        $(".h5_c").trigger(leave?"onLeave":"onLoad");
+    })
+</script>
+</body>
+</html>
